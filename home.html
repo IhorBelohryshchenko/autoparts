@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="d-flex flex-flow flex-wrap" id="header"> 
+        <div class="container pt-3 pb-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <a href="/home.html">
+                    <div class="logo d-flex flex-row flex-wrap">
+                        <span class="logo__first_part">auto</span>
+                        <span class="logo__second_part">parts</span>
+                    </div>
+                </a>
+                <div class="client_menu d-flex flex-row flex-wrap align-items-center">
+                    <a href="/login.html" class="d-flex flex-row align-items-center">
+                        <button class="client_menu__login" type="button">login</button>
+                    </a>
+                    <a href="/cart.html" class="d-flex flex-row align-items-center">
+                        <button class="client_menu__shopping_cart" type="button"></button>
+                        <div class="client_menu__shopping_cart_count align-items-center">({{quantity}}) $ {{sum}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="menu d-flex flex-row flex-nowrap align-items-center">
+                    <ul class="header_menu">
+                        <a href="#">
+                            <li>home</li>
+                        </a>
+                        <a href="#catalog">
+                            <li>catalog</li>
+                        </a>
+                        <a href="#contact" id="contact_bg">
+                            <li>contact us</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="search d-flex flex-row flex-wrap align-items-center">
+                    <input type="text" class="search__text" placeholder="enter query" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="search__button" type="button" id="button-addon2">
+                        <div class="search__image"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="d-flex flex-column">
+        <div class="container pt-3">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="wrapper d-flex justify-content-center align-items-center">
+                            <img src="src/rover_silver.jpg" height="400px">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="wrapper d-flex justify-content-center align-items-center">
+                            <img src="src/mazda_red.jpg" height="400px">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="wrapper d-flex justify-content-center align-items-center">
+                            <img src="src/ford_blue.jpg" height="400px">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="wrapper d-flex justify-content-center align-items-center">
+                            <img src="src/bmw_silver.jpg" height="400px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="d-flex flex-row py-3" id="catalog">
+        <div class="container d-flex flex-row flex-wrap py-3" >
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        exhaust tips
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                           Catalytic Converter
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Mufflers
+                         </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                           Exhaust Pipes
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        bumpers & components
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            BMW Bumper
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Mazda Bumper
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Ford Bumper
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Range-Rover Bumper
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        mirrors & components
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Outside Mirror Cover
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="accordion-body">
+                            Mirror Replacement Glass
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFouth">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFouth" aria-expanded="false" aria-controls="collapseThree">
+                            grilles & components
+                        </button>
+                    </h2>
+                    <div id="collapseFouth" class="accordion-collapse collapse" aria-labelledby="headingFouth" data-bs-parent="#accordionExample">
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                BMW grille
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Mazda Bumper
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Ford Bumper
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Range-Rover Bumper
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFifth">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseThree">
+                            brake discs
+                        </button>
+                    </h2>
+                    <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionExample">
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                BMW brake discs
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Mazda brake discs
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Ford brake discs
+                            </div>
+                        </a>
+                        <a href="/categories.html">
+                            <div class="accordion-body">
+                                Range-Rover brake discs
+                            </div>
+                        </a>
+                    </div>
+                </div>
+              </div>
+    
+            <div class="product_list col-sm d-flex flex-wrap">
+                <div class="popular_categories col-sm flex-wrap">
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">accessories</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/сиденья.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">halo</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/фары.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">air</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/воздух.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">suspension</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/стойка.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">turbine</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/дичь.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/categories.html">
+                        <div class="popular_categories_block d-flex">
+                            <div class="popular_categories_block_info">
+                                <div class="popular_categories_block__title">exhaust</div>
+                                <div class="popular_categories_block__text">Nowadays we have great opportunites to satisfy your demand with the high quality products</div>
+                            </div>
+                            <div class="popular_categories_block__image">
+                                <img src="src/фар1.png" max-width="100px" height="100px">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="featured_products">
+        <div class="container">
+            <div class="featured_products_text">featured products</div>
+        </div>
+    </div>
+    
+    <section class="product_section" id="shopping_cart">
+        <div class="container product_section_container d-flex flex-row justify-content-between">
+            <div class="special_offer">
+                <img src="src/sale.jpg" max-width="250px" height="250px">
+            </div>
+            <div class="product_items d-flex flex-row flex-wrap justify-content-between">
+                <div class="product_item flex-row" v-for="item in shopItems">
+                    <a :href=item.url>
+                        <img :src=item.photo max-width="300px" height="270px">
+                    </a>
+                    <div class="product_item_price">$ {{item.price}}</div>
+                    <div class="product_item_title">
+                        <a :href=item.url>
+                            {{item.name}}
+                        </a>
+                    </div>
+                    <div class="product_item_description">{{item.description}}</div>
+                    <div class="product_item_buttons d-flex flex-row flex-nowrap">
+                        <button class="add_to_cart d-flex flex-row flex-nowrap" v-on:click="() => addToShoppingCart(item.id)" v-on:click="() => AddProduct(item.id)">
+                            <div class="product_item_img"></div>
+                            <span>Add to Cart</span>
+                        </button>
+                        <a :href=item.url>
+                            <button class="product_item_details" id="details">Details</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="black_line d-flex flex-row"></section>
+
+    <section class="d-flex flex-row py-3">
+        <div class="container d-flex flex-row py-3">
+            <div class="col-sm">
+                <div class="follow_us">
+                    <span>follow us</span>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/">
+                            <div class="social_item">Facebook</div>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <div class="social_item">Twitter</div>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <div class="social_item">Instagram</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="contacts text-end" id="contact">
+                    <div class="contacts_title">contacts</div>
+                    <div class="adress">My Company, lol-kek, cheburek</div>
+                    <div class="phone">Call us now: 0123-456-789</div>
+                    <div class="email">Email: <span>Igoryan_molodec@krasivo_sdelal.com<span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d-flex flex-row py-3">
+        <div class="container d-flex flex-row py-3">
+            <div class="rights">Powered By Igoryan <span>AUTO</span>parts © 2021. All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
