@@ -4,9 +4,9 @@ const shopping = new Vue({
         count: 1,
         cartItems: [],
         shopItems: [
-            { id: 1, name: 'Angel Eye Headlight BMW 3er Limo', price: 350, url: '/product.html', photo: 'src/prod1.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.'},
-            { id: 2, name: 'Mazda Gearbox Transmission', price: 400, url: '/product1.html', photo: 'src/prod2.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.' },
-            { id: 3, name: 'Headlight Ford Focus Typ 6N', price: 175, url: '/product2.html', photo: 'src/prod3.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.' },
+            { id: 1, name: 'Angel Eye Headlight BMW 3er Limo', price: 350, url: 'product.html', photo: 'src/prod1.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.'},
+            { id: 2, name: 'Mazda Gearbox Transmission', price: 400, url: 'product1.html', photo: 'src/prod2.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.' },
+            { id: 3, name: 'Headlight Ford Focus Typ 6N', price: 175, url: 'product2.html', photo: 'src/prod3.png', description: 'So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place.' },
     ]},
     methods: {
         addToShoppingCart: function(id) {
